@@ -15,10 +15,17 @@ public class TooLargeTooSmall {
         // initialise instance variables
         chosenNum = seed;
     }
-    
-    public Integer guess(Integer g) {
-        
-        return chosenNum;
 
+    public Integer guess(Integer g) {
+        if(g > this.chosenNum)
+        {
+          return 1;
+        } else if (g < this.chosenNum)
+        {
+          return -1;
+        } else
+        {
+          return 0;
+        }
     }
 }
